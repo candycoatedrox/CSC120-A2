@@ -1,3 +1,5 @@
-Use this file to record your reflection on this assignment. 
+This assignment was pretty simple. A lot of the work was just reorganizing the code we were given — first deciding which methods should belong to which class, and then copy-and-pasting the procedural method into the appropriate class file. Each method only required very small edits to work within the class. The only code I really had to write from scratch was the __init__ constructor method for each class, which was very simple.
 
-What worked, what didn't, what advice would you give someone taking this course in the future?
+I sorted the methods into the ResaleShop and Computer classes based on a simple rule: ResaleShop is in charge of the *inventory,* while Computer is in charge of an *individual computer* and its attributes. Methods that manage the inventory (buy(), sell(), printInventory()) were incorporated into ResaleShop; methods that manage an individual computer (updatePrice(), refurbish()) were incorporated into Computer.
+
+Overall, the assignment went very smoothly. My advice to someone completing this assignment in the future would be to think of the shop as the inventory itself, instead of the "shop" as a whole, while deciding where to put each method.

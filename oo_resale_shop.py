@@ -32,8 +32,11 @@ class ResaleShop:
     Prints all the items in the inventory (if it isn't empty), prints error otherwise
     """
     def printInventory(self):
+        # If the inventory is not empty
         if self.inventory:
+            # For each item
             for id in range(len(self.inventory)):
+                # Print its details
                 print(f'({id + 1}.) {self[id]}')
         else:
             print("No inventory to display.")

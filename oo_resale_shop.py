@@ -1,3 +1,4 @@
+# Import the Computer class and its methods from computer.py
 from computer import Computer
 
 class ResaleShop:
@@ -21,10 +22,10 @@ class ResaleShop:
     prints error message otherwise
     """
     def sell(self, id: int):
-        if self[id] is not None:
+        try:
             c = self.inventory.pop(id)
             print(f'Item {id} ({c.desc}) sold!')
-        else:
+        except:
             print(f'Item {id} not found. Please select another item to sell.')
     
     """
@@ -42,7 +43,8 @@ def main():
         "2019 MacBook Pro",
         "Intel",
         256, 16,
-        "High Sierra", 2019, 1000)
+        "High Sierra", 2019, 1000
+    )
     comp2 = Computer(
         "Mac Pro (Late 2013)",
         "3.5 GHc 6-Core Intel Xeon E5",
@@ -61,5 +63,3 @@ def main():
 
     shop[0].refurbish()
     shop.printInventory()
-
-main()
